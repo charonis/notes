@@ -1,0 +1,328 @@
+/* @font-face {
+    font-family: clock;
+    src: url(/font/clock/Inset7.ttf);
+} */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 ;
+    padding: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(black, rgb(10, 10, 10),rgb(20, 20, 20),rgb(30, 30, 30),
+    rgb(35, 35, 35));
+}
+.green{
+    width: 40px;
+    background-color:rgb(16, 58, 41);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border:2px solid rgb(16, 58, 41);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10px;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+/* */
+/* .animation{
+    transition-property:margin-bottom;
+    transition-duration:3s ;
+    animation:move 
+} */
+/* .green:active{
+
+    background-color:rgb(86, 206, 158);
+    border:2px solid rgb(62, 204, 147);
+
+} */
+.red{
+    background-color:rgb(66, 28, 28);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border:2px solid rgb(66, 28, 28);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10px;
+    margin-bottom: 35px;
+    cursor: pointer;
+
+}
+.clock{
+    padding: 20px 200px;
+    border: 10px solid rgba(133, 130, 130, 0.24);
+    font-size: 100px;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+}
+.container__button{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    height: 500px;
+    /* background-color:aqua; */
+    align-items:end;
+}
+.container__button__main{
+    display: flex;
+    justify-content: center;
+}
+.container__body__main{
+    display: flex;
+    justify-content: center;
+    color:gold;
+}
+.container__body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 500px;
+    height: 100px;
+    /* background-color:chocolate ; */
+}
+@keyframes move{
+    0%{
+        margin-bottom: 35px;
+    }
+    20%{
+        margin-bottom: 30px;
+    }
+    40%{
+        margin-bottom:25px;
+    }
+    60%{
+        margin-bottom:20px;
+    }
+    80%{
+        margin-bottom:15px;
+    }
+
+    100%{
+        margin-bottom: 10px;
+    }
+ }
+ .imgKeyframes{
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function:linear;
+    animation-iteration-count:2;
+    animation-direction: alternate;
+}
+
+.modal{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    opacity: 0;
+    visibility:hidden;
+    transition-duration: 1.5s;
+}
+.overlay{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(black, rgb(10, 10, 10),rgb(20, 20, 20),rgb(30, 30, 30),
+    rgb(35, 35, 35));
+    z-index: 0;
+}
+.modal_window{
+    position:relative ;
+    z-index: 2;
+    width: 600px;
+    height: 800px;
+    border-radius:10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5) ;
+}
+.botton_close_2{
+   width: 30px; 
+   height: 30px;
+   margin: 0 auto;
+   margin-bottom: 10px;
+   color:#000000;
+   cursor: pointer;
+}
+
+.input_items{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius:50%;
+    
+}
+.input-element-two{
+    max-width: 95px;
+    max-height: 34px;
+    min-width: 95px;
+    min-height: 34px;
+    font-size: 30px;
+    overflow: hidden;
+    background-color: #000000;
+    border: 0px black solid;
+    resize: none;
+    color:gold;
+    text-align: center;
+}
+.hello_3{
+    max-width: 300px;
+    max-height: 100px;
+    min-width: 300px;
+    min-height: 100px;
+    background-color: #000000;
+    color:cadetblue;
+    border: 0px black solid;
+    resize: none;
+    color:gold;
+    font-size: 20px;
+    /* margin-bottom: 40px; */
+}
+.test_container_list{
+    min-width: 550px;
+    min-height: 500px;
+    max-width: 550px;
+    max-height: 500px;
+    background-color: #000000;
+    overflow:auto;
+    overflow-x: hidden;
+
+}
+textarea:focus,input:focus{
+    outline: none;
+}
+.set_items{
+    margin-bottom: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius:50%;
+    background-color:rgb(0, 0, 0);
+    cursor: pointer;
+}
+button:focus,
+button:active {
+  outline: none;
+}
+.container_items{
+    display:flex;
+    justify-content: space-around;
+    /* background-color:rgb(36, 35, 35); */
+    height: 100px;
+    width: 450px;
+    margin:0 auto;
+    margin-top:10px;
+    border-radius:10px;
+    background: -webkit-linear-gradient(315deg, rgb(0, 0, 0), rgb(69, 69, 69));
+    background: -moz-linear-gradient(315deg, rgb(0, 0, 0), rgb(69, 69, 69));
+    background: linear-gradient(315deg, rgb(0, 0, 0), rgb(69, 69, 69));
+    cursor: pointer;
+
+
+}
+
+.animation_create{
+    animation-name: slider;
+    animation-duration:2s;
+}
+
+@keyframes slider{
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+.container_item_text{
+    /* background-color:rgb(37, 37, 37);
+    border: 0px rgb(37, 37, 37) solid; */
+    display: flex;
+    min-height: 80px;
+    min-width: 300px;
+    max-height: 80px;
+    max-width: 300px;
+    margin-top:10px;
+    overflow:auto;
+    background-color:rgb(0, 0, 0);
+    color:gold;
+}
+.container_item_clock{
+    /* background-color:rgb(37, 37, 37);
+    border: 0px rgb(37, 37, 37) solid; */
+    margin-top: 35px;
+    resize: none;
+    max-width: 95px;
+    max-height: 34px;
+    min-width: 95px;
+    min-height: 34px;
+    font-size: 30px;
+    overflow: hidden;
+    background-color:rgb(0, 0, 0);
+    color:gold;
+}
+
+
+.animation_remove{
+    animation-name: sliderg;
+    animation-duration:2s;
+}
+
+@keyframes sliderg{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.animation_signal{
+    animation-name:signal;
+    animation-duration:1,5;
+    animation-iteration-count: infinite;
+}
+@keyframes signal{
+    0%{
+        /* opacity:1; */
+        background:rgb(39, 0, 0)
+        
+    }
+    100%{
+        /* opacity: 0.2; */
+        background:red
+       
+    }
+}
+body:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
